@@ -2,20 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Blinking : MonoBehaviour
+namespace demo2d
 {
-    private SpriteRenderer spriteRenderer;
-
-    // Start is called before the first frame update
-    void Start()
+    public class Blinking : MonoBehaviour
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
+        private SpriteRenderer spriteRenderer;
 
-    // Update is called once per frame
-    void Update()
-    {
-        spriteRenderer.enabled = !spriteRenderer.enabled;
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+        }
 
+        // Update is called once per frame
+        void Update()
+        {
+            spriteRenderer.enabled = !spriteRenderer.enabled;
+        }
+
+    }
 }
