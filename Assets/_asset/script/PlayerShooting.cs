@@ -5,10 +5,11 @@ namespace demo2d
 {
     public class PlayerShooting : MonoBehaviour
     {
-        public GameObject bulletPrefab;
+        public GameObject bulletPrefabs;
         public float shootingInterval;
-        private float lastBulletTime;
+        public Vector3 bulletOffset;
 
+        private float lastBulletTime;
         // Start is called before the first frame update
         void Start()
         {
@@ -20,18 +21,23 @@ namespace demo2d
         {
             if (Input.GetMouseButton(0))
             {
-                if (Time.time - lastBulletTime > shootingInterval)
-                {
-                    ShootBullet();
-                    lastBulletTime = Time.time;
-                }
-
+                UpdateFiring();
             }
         }
+        private void UpdateFiring()
+        {
+            if (Time.time - lastBulletTime > shootingInterval)
+            {
+                ShootBullet();
+                lastBulletTime = Time.time;
+            }
+        }
+
         private void ShootBullet()
         {
-            Instantiate(bulletPrefab, transform.position, transform.rotation);
+            var bullet = Instantiate(bulletPrefabs, transform.position + bulletOffset, transform.rotation);
         }
+
     }
 }
 
