@@ -200,7 +200,7 @@ PrefabInstance:
     - target: {fileID: 208807149, guid: e25c84c402a921846a9a8460af0fc4c7, type: 3}
       propertyPath: explosionPrefab
       value: 
-      objectReference: {fileID: 775021104175016712, guid: aab04722d632615478d6b2aaa6eb1667,
+      objectReference: {fileID: 1280240331523082, guid: 031faf5ef0ec4c34c86671fa3e2e81d1,
         type: 3}
     - target: {fileID: 1679431317439752854, guid: e25c84c402a921846a9a8460af0fc4c7,
         type: 3}
@@ -6159,7 +6159,7 @@ PrefabInstance:
     - target: {fileID: 208807149, guid: e25c84c402a921846a9a8460af0fc4c7, type: 3}
       propertyPath: explosionPrefab
       value: 
-      objectReference: {fileID: 775021104175016712, guid: aab04722d632615478d6b2aaa6eb1667,
+      objectReference: {fileID: 1280240331523082, guid: 031faf5ef0ec4c34c86671fa3e2e81d1,
         type: 3}
     - target: {fileID: 208807149, guid: e25c84c402a921846a9a8460af0fc4c7, type: 3}
       propertyPath: defaultHealthPoint
@@ -10943,7 +10943,7 @@ PrefabInstance:
     - target: {fileID: 208807149, guid: e25c84c402a921846a9a8460af0fc4c7, type: 3}
       propertyPath: explosionPrefab
       value: 
-      objectReference: {fileID: 775021104175016712, guid: aab04722d632615478d6b2aaa6eb1667,
+      objectReference: {fileID: 1280240331523082, guid: 031faf5ef0ec4c34c86671fa3e2e81d1,
         type: 3}
     - target: {fileID: 1679431317439752854, guid: e25c84c402a921846a9a8460af0fc4c7,
         type: 3}
@@ -11105,7 +11105,7 @@ PrefabInstance:
     - target: {fileID: 208807149, guid: e25c84c402a921846a9a8460af0fc4c7, type: 3}
       propertyPath: explosionPrefab
       value: 
-      objectReference: {fileID: 775021104175016712, guid: aab04722d632615478d6b2aaa6eb1667,
+      objectReference: {fileID: 1280240331523082, guid: 031faf5ef0ec4c34c86671fa3e2e81d1,
         type: 3}
     - target: {fileID: 1679431317439752854, guid: e25c84c402a921846a9a8460af0fc4c7,
         type: 3}
@@ -11623,7 +11623,7 @@ PrefabInstance:
     - target: {fileID: 208807149, guid: e25c84c402a921846a9a8460af0fc4c7, type: 3}
       propertyPath: explosionPrefab
       value: 
-      objectReference: {fileID: 775021104175016712, guid: aab04722d632615478d6b2aaa6eb1667,
+      objectReference: {fileID: 1280240331523082, guid: 031faf5ef0ec4c34c86671fa3e2e81d1,
         type: 3}
     - target: {fileID: 1679431317439752854, guid: e25c84c402a921846a9a8460af0fc4c7,
         type: 3}
@@ -11725,7 +11725,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2078943837
 MonoBehaviour:
   m_ObjectHideFlags: 0
