@@ -4,31 +4,18 @@ using UnityEngine;
 
 namespace demo2d
 {
-    public class EnemyHealth : MonoBehaviour
+    public class EnemyHealth : Health
     {
-        public GameObject explosionPrefab;
-        public int defaultHealthPoint;
-        private int healthPoint;
+        public static int LivingEnemyCount;
 
-        private void Start() => healthPoint = defaultHealthPoint;
+        private void Awake() => LivingEnemyCount++;
 
-        public void TakeDamage(int damage)
+        protected override void Die()
         {
-            if (healthPoint <= 0) return;
-
-            healthPoint -= damage;
-            if (healthPoint <= 0) Die();
+            LivingEnemyCount--;
+            base.Die();
         }
 
-
-       //private void OnTriggerEnter2D(Collider2D collision) => Die();
-
-        private void Die()
-        {
-            var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
-            Destroy(explosion, 1);
-            Destroy(gameObject);
-        } 
     }
 
 }

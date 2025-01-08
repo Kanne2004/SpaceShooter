@@ -6,8 +6,12 @@ namespace demo2d
     public class Health : MonoBehaviour
     {
         public GameObject explosionPrefab;
+        
         public int defaultHealthPoint;
-        private int healthPoint;
+        public int healthPoint;
+
+        public System.Action onDead;
+
 
         private void Start() => healthPoint = defaultHealthPoint;
 
@@ -24,8 +28,9 @@ namespace demo2d
         protected virtual void Die()
         {
             var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
-            Destroy(explosion, 1);
+            Destroy(explosion, 1f);
             Destroy(gameObject);
+            onDead?.Invoke();
         }
 
     }
