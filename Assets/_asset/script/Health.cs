@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 namespace demo2d
 {
     public class Health : MonoBehaviour
@@ -17,13 +18,11 @@ namespace demo2d
 
         public void TakeDamage(int damage)
         {
-            if (healthPoint <= 0) return;
+            //if (healthPoint <= 0) return;
 
             healthPoint -= damage;
             if (healthPoint <= 0) Die();
         }
-
-        public void OnTriggerEnter2D(Collider2D collision) => Die();
 
         protected virtual void Die()
         {

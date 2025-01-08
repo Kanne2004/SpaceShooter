@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace demo2d
-{ 
+{
     public class BattleFlow : MonoBehaviour
     {
+        public GameObject gameWinUI;
         public GameObject gameOverUI;
         public PlayerHealth playerHealth;
         public GameObject bgMusic;
-        public GameObject gameWinUI;
+
 
 
         // Start is called before the first frame update
@@ -25,7 +26,11 @@ namespace demo2d
         // Update is called once per frame
         void Update()
         {
-            if (EnemyHealth.LivingEnemyCount <= 0)
+            if (playerHealth.healthPoint <= 0)
+            {
+                OnGameOver();
+            }
+            else if (EnemyHealth.LivingEnemyCount <= 0)
             {
                 OnGameWin();
             }
@@ -40,7 +45,7 @@ namespace demo2d
         private void OnGameWin()
         {
             gameWinUI.SetActive(true);
-            bgMusic.SetActive(false);
+            bgMusic.SetActive(true);
             playerHealth.gameObject.SetActive(false);
         }
         public void ReturnToMainMenu() => SceneManager.LoadScene("MainMenu");
