@@ -14,14 +14,20 @@ namespace demo2d
         public System.Action onDead;
 
 
-        private void Start() => healthPoint = defaultHealthPoint;
+        private void Start()
+        {
+            healthPoint = defaultHealthPoint;
+        }
+
 
         public void TakeDamage(int damage)
         {
+
             //if (healthPoint <= 0) return;
 
             healthPoint -= damage;
             if (healthPoint <= 0) Die();
+
         }
 
         protected virtual void Die()
