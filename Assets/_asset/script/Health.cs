@@ -14,7 +14,7 @@ namespace demo2d
         public System.Action onDead;
 
 
-        private void Start()
+        private void Awake()
         {
             healthPoint = defaultHealthPoint;
         }

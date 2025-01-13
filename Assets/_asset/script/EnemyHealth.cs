@@ -10,11 +10,16 @@ namespace demo2d
         public static int LivingEnemyCount;
         public Slider slider;
 
-        private void Awake() => LivingEnemyCount++;
-
-        void Start()
+        private void Awake()
         {
+            LivingEnemyCount++;
+            healthPoint = defaultHealthPoint;
             slider.maxValue = defaultHealthPoint;
+            slider.value = healthPoint;
+        }
+        private void Update()
+        {
+            slider.value = healthPoint;
         }
         protected override void Die()
         {
